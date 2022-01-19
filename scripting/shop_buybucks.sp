@@ -38,12 +38,12 @@ public void OnPluginStart()
 {
 	(CVARCount = CreateConVar("sm_buybucks_count", "1000", "Количество выдаваемых денег.", _, true, 0.0)).AddChangeHook(ChangeCvar_Count);
 	(CVARPrice = CreateConVar("sm_buybucks_price", "3500", "Стоимость покупки данной опции.", _, true, 0.0)).AddChangeHook(ChangeCvar_Price);
-	(CVARSell = CreateConVar("sm_buybucks_sell", "0", "Стоимость в кредитах при продаже.", _, true, 0.0)).AddChangeHook(ChangeCvar_Sell);
+	(CVARSell = CreateConVar("sm_buybucks_sell", "0", "Стоимость при продаже.", _, true, 0.0)).AddChangeHook(ChangeCvar_Sell);
 	(CVARRound = CreateConVar("sm_buybucks_rounds", "2", "Количество раундов в начале матча, в течение которых покупка запрещена.", _, true, 0.0)).AddChangeHook(ChangeCvar_Round);
 	(CVARHalf = FindConVar("mp_halftime")).AddChangeHook(ChangeCvar_Half);
 	(CVARMax = FindConVar("mp_maxrounds")).AddChangeHook(ChangeCvar_MaxRounds);
 	
-	AutoExecConfig(true, "buybucks", "sourcemod");	
+	AutoExecConfig(true, "buybucks", "shop");	
 	
 	Autoexec();
 	
