@@ -51,6 +51,10 @@ public void OnPluginStart()
 	
 	HookEvent("round_start",OnRound,EventHookMode_Post);
 	
+}
+
+public void OnMapStart()
+{
 	GetCurRound();
 }
 
